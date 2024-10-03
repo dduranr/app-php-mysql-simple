@@ -1,0 +1,54 @@
+a:active,
+a:hover,
+a:focus,
+a:visited {
+	text-decoration: none;
+}
+
+.caja-popup {
+	.centrar-vertical-y-horizontalmente(none, @blue2, fixed, 50%, 50%, center, -50%, -50%, 9999);
+	background: #fff;
+	padding: 30px;
+	margin: 20px 0;
+	font-size: 30px;
+	line-height: 1;
+	color: @blue2;
+	border: 20px solid @blue2;
+}
+.caja-popup-bis {
+	display: none;
+}
+
+// <div class="spinner-gif">
+// 	<img src="generales/assets/images/icons/loading.gif" alt="" />
+// </div>
+.spinner-gif {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.5);
+	.centrar-vertical-y-horizontalmente(none, #fff, fixed, 50%, 50%, center, -50%, -50%, 99999);
+	img {
+		.centrar-vertical-y-horizontalmente(inline-block, #fff, fixed, 50%, 50%, center, -50%, -50%, 99999);
+	}
+}
+
+.btn-primary {
+    background-color: @colorInstitucional;
+    border-color: @colorInstitucional;
+    &:hover {
+	    background-color: @colorInstitucionalBold;
+	    border-color: @colorInstitucionalBold;
+    }
+}
+
+.bg-danger {
+	background-color: red;
+	color: white;
+	> * {color: white;}
+}
+.bg-success {
+	background-color: green;
+	color: white;
+	> * {color: white;}
+}
+

@@ -1,0 +1,256 @@
+.caja-popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  background: #23d1d2;
+  padding: 30px;
+  margin: 20px 0;
+  font-size: 25px;
+  line-height: 30px;
+  border: 20px solid #fff;
+  color: #fff;
+}
+.caja-popup > * {
+  color: #fff;
+}
+.caja-popup p {
+  font-size: 25px;
+  line-height: 30px;
+}
+.txtOverIMG_thumbnail {
+  position: relative;
+}
+.txtOverIMG_caption {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: left;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 9;
+}
+.txtOverIMG_caption > * {
+  color: #fff;
+}
+.blink1 {
+  animation: blinker1 0.6s linear infinite;
+  color: #1c87c9;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+@keyframes blinker1 {
+  50% {
+    opacity: 0;
+  }
+}
+.blink2 {
+  animation: blinker2 1s linear infinite;
+}
+@keyframes blinker2 {
+  0% {
+    opacity: 0;
+  }
+}
+.blink3 {
+  animation: blinker3 1.4s linear infinite;
+}
+@keyframes blinker3 {
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes smoothBounce {
+  0% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
+@-moz-keyframes smoothBounce {
+  0% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
+@keyframes smoothBounce {
+  0% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
+a:active,
+a:hover,
+a:focus,
+a:visited {
+  text-decoration: none;
+}
+.caja-popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  background: #fff;
+  padding: 30px;
+  margin: 20px 0;
+  font-size: 30px;
+  line-height: 1;
+  color: #009090;
+  border: 20px solid #009090;
+}
+.caja-popup > * {
+  color: #009090;
+}
+.caja-popup-bis {
+  display: none;
+}
+.spinner-gif {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 99999;
+}
+.spinner-gif > * {
+  color: #fff;
+}
+.spinner-gif img {
+  display: inline-block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 99999;
+}
+.spinner-gif img > * {
+  color: #fff;
+}
+.btn-primary {
+  background-color: #23d1d2;
+  border-color: #23d1d2;
+}
+.btn-primary:hover {
+  background-color: #009090;
+  border-color: #009090;
+}
+.bg-danger {
+  background-color: red;
+  color: white;
+}
+.bg-danger > * {
+  color: white;
+}
+.bg-success {
+  background-color: green;
+  color: white;
+}
+.bg-success > * {
+  color: white;
+}
+.contenedor {
+  max-width: 1140px;
+  margin: auto;
+}
+.fila {
+  display: flex;
+  flex-wrap: wrap;
+}
+div[class^="columna"] {
+  box-sizing: border-box;
+  padding: 15px;
+  background-color: rgba(0, 0, 255, 0.15);
+  border: 1px solid rgba(0, 0, 255, 0.3);
+}
+@media screen and (min-width: 768px) {
+  /*
+	Las siguientes clases ocupan la línea "flex: 0 0 auto". Significado:
+		0 		- 	flex-grow. 		Si hay espacio extra, la etiqueta no se expandirá para llenarlo.
+		0		- 	flex-shrink.	La etiqueta no se encogerá si el espacio disponible es menor al tamaño natural del elemento.
+		auto 	- 	flex-basis.		Tamaño inicial de la etiqueta. El valor auto quiere decir que el tamaño se determinará de acuerdo al contenido del elemento.
+*/
+  .columna-1 {
+    flex: 0 0 auto;
+    width: 8.33333333%;
+  }
+  .columna-2 {
+    flex: 0 0 auto;
+    width: 16.66666667%;
+  }
+  .columna-3 {
+    flex: 0 0 auto;
+    width: 25%;
+  }
+  .columna-4 {
+    flex: 0 0 auto;
+    width: 33.33333333%;
+  }
+  .columna-5 {
+    flex: 0 0 auto;
+    width: 41.66666667%;
+  }
+  .columna-6 {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+  .columna-7 {
+    flex: 0 0 auto;
+    width: 58.33333333%;
+  }
+  .columna-8 {
+    flex: 0 0 auto;
+    width: 66.66666667%;
+  }
+  .columna-9 {
+    flex: 0 0 auto;
+    width: 75%;
+  }
+  .columna-10 {
+    flex: 0 0 auto;
+    width: 83.33333333%;
+  }
+  .columna-11 {
+    flex: 0 0 auto;
+    width: 91.66666667%;
+  }
+  .columna-12 {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+}
