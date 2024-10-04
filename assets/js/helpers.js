@@ -3,11 +3,25 @@ function administrarTarea(id, accion) {
 	jQuery(document).ready(function() {
 
 		// --> Recuperamos la info de la acción solicitada y armamos los datos a enviar en la petición Ajax
-		var ajaxType = '';
 		var ajaxDatos = new FormData();
 
-
 		if (accion == "crear") {
+			// Mi intención inicial era crear un formulario HTML, sin embargo, para mantener la simplicidad de la aplicación opto por usar un simple prompt.
+			// jQuery('#wrapper-form-crear-tarea').css('display','block');
+			var nombre = prompt('Nombre de la nueva tarea: ');
+			if (nombre !== undefined && nombre !== null) {
+				if (nombre.length > 0) {
+					ajaxDatos.append('accion','crear');
+					ajaxDatos.append('nombre',nombre);
+				}
+				else {
+					alert('El nombre de la nueva tarea NO puede ir vacío.');
+					return false;
+				}
+			}
+			else {
+				return false;
+			}
 		}
 
 		else if (accion == "editar") {
@@ -15,11 +29,13 @@ function administrarTarea(id, accion) {
 
 		else if (accion == "eliminar") {
 		    var alert_confirmation;
-		    alert_confirmation = confirm('¿Eliminar permanentemente la tarea '+id+'?');
+		    alert_confirmation = confirm('¿Eliminar permanentemente la tarea con ID '+id+'?');
 		    if (alert_confirmation) {
-				ajaxType = 'POST';
 				ajaxDatos.append('id',id);
 				ajaxDatos.append('accion','eliminar');
+		    }
+		    else {
+		    	return false;
 		    }
 		}
 
@@ -27,7 +43,7 @@ function administrarTarea(id, accion) {
 		jQuery.ajax({
 			url: 'process.php',
 			data: ajaxDatos,
-			type: ajaxType,
+			type: 'POST',
 			dataType: 'json',
 			async: true,
 			cache: false,
@@ -38,11 +54,17 @@ function administrarTarea(id, accion) {
 			},
 			success: function(response) {
 				if (response.return === true) {
-					jQuery('#btn-eliminar-'+response.id).html('Tarea eliminada').addClass('bg-danger').attr('disabled', true);
-					jQuery('#btn-editar-'+response.id).attr('disabled', true);
+					if (accion == "crear") {
+						jQuery('#wrapper-msg-success').removeClass('displayNone');
+						jQuery('#msg-success ').html(response.msg);
+					}
+					else if (accion == "eliminar") {
+						jQuery('#btn-eliminar-'+response.id).html(response.msg).addClass('bg-danger').attr('disabled', true);
+						jQuery('#btn-editar-'+response.id).attr('disabled', true);
+					}
 				}
 				else {
-					alert(response.errores);
+					alert(response.msg);
 				}
 			},
 			complete: function(jqXHR, estado, error) {

@@ -38,6 +38,15 @@
         </div>
         <?php endif; ?>
 
+        <div id="wrapper-msg-success" class="contenedor bg-success displayNone">
+            <div class="fila">
+                <div class="columna-12">
+                    <h3>¡EXCELENTE!</h3>
+                    <p id="msg-success"></p>
+                </div>
+            </div>
+        </div>
+
 		<div class="contenedor">
 			<div class="fila">
 				<div class="columna-6">
@@ -108,7 +117,7 @@
 		</div>
 
 		<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-		<script src="assets/js/helpers.js"></script>
+		<script src="assets/js/helpers.js?4"></script>
 
 	</body>
 </html>
