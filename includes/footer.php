@@ -3,7 +3,7 @@
 </div>
 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-<script src="assets/js/helpers.js?18"></script>
+<script src="assets/js/helpers.js?22"></script>
 
 <script>
 
@@ -26,15 +26,13 @@
 				},
 				success: function(response) {
 					if (response.return === true) {
-						if (response.accion == "crear") {
-							jQuery('#wrapper-msg-success').removeClass('displayNone');
-							jQuery('#msg-success ').html(response.msg);
-							setTimeout(
-								function() {
-									window.location.href = 'index.php';
-								},3000
-							);
-						}
+						jQuery('#wrapper-msg-success').removeClass('displayNone');
+						jQuery('#msg-success ').html(response.msg);
+						setTimeout(
+							function() {
+								window.location.href = 'index.php';
+							},7000
+						);
 					}
 					else {
 						alert(response.msg);

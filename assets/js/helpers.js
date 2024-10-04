@@ -41,7 +41,7 @@ function administrarTarea(id, accion) {
 					}
 					else if (accion == "eliminar") {
 						jQuery('#btn-eliminar-'+response.id).html(response.msg).addClass('bg-danger').attr('disabled', true);
-						jQuery('#btn-editar-'+response.id).attr('disabled', true);
+						jQuery('#btn-editar-'+response.id).attr('href', 'javascript:;');
 					}
 				}
 				else {

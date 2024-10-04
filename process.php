@@ -18,7 +18,17 @@
 			    $stmt->bindParam(1, $nombre);
 			    $stmt->execute();
 				$AJAX_return = true;
-				$AJAX_msg = 'Tarea creada satisfactoriamente.<br>Redirigiendo al inicio...';
+				$AJAX_msg = 'Tarea creada satisfactoriamente vía <strong>AJAX</strong>.<br><br>Redirigiendo al inicio...';
+			}
+
+			elseif ($accion==='editar') {
+			    $query = 'UPDATE tasks SET task_name=? WHERE id = ?';
+			    $stmt = $pdo->prepare($query);
+			    $stmt->bindParam(1, $nombre);
+			    $stmt->bindParam(2, $id);
+			    $stmt->execute();
+				$AJAX_return = true;
+				$AJAX_msg = 'Tarea '.$id.' actualizada correctamente vía <strong>AJAX</strong>.<br><br>Redirigiendo al inicio...';
 			}
 
 			elseif ($accion==='eliminar') {

@@ -58,7 +58,7 @@
                                     <td><?php echo $val['task_name']; ?></td>
                                     <td><?php echo $val['created_at']; ?></td>
                                     <td>
-                                    	<button id="btn-editar-<?php echo $id; ?>" data-id="<?php echo $id; ?>" onClick="administrarTarea(this.getAttribute('data-id'), 'editar')">Editar</button>
+                                    	<a id="btn-editar-<?php echo $id; ?>" href="edit.php?id=<?php echo $id; ?>">Editar</a>
                                     </td>
                                     <td>
                                     	<button id="btn-eliminar-<?php echo $id; ?>" data-id="<?php echo $id; ?>" onClick="administrarTarea(this.getAttribute('data-id'), 'eliminar')">Eliminar</button>
