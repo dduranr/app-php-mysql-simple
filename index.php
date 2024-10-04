@@ -44,7 +44,7 @@
 					<h2>Lista de tareas</h2>
 				</div>
 				<div class="columna-6">
-					<button id="crear-tarea">Crear tarea</button>
+					<button id="crear-tarea" onClick="administrarTarea(null, 'crear')">Crear tarea</button>
 				</div>
 			</div>
 		</div>
@@ -68,8 +68,12 @@
                                     <td><?php echo $val['id']; ?></td>
                                     <td><?php echo $val['task_name']; ?></td>
                                     <td><?php echo $val['created_at']; ?></td>
-                                    <td><button>Editar</button></td>
-                                    <td><button>Eliminar</button></td>
+                                    <td>
+                                    	<button id="btn-editar-<?php echo $id; ?>" data-id="<?php echo $id; ?>" onClick="administrarTarea(this.getAttribute('data-id'), 'editar')">Editar</button>
+                                    </td>
+                                    <td>
+                                    	<button id="btn-eliminar-<?php echo $id; ?>" data-id="<?php echo $id; ?>" onClick="administrarTarea(this.getAttribute('data-id'), 'eliminar')">Eliminar</button>
+                                    </td>
                                 </tr>
                             <?php endforeach; ?>
 						</tbody>
@@ -86,6 +90,12 @@
 				</div>
 			</div>
 		</div>
+
+		<div class="spinner-gif">
+			<img src="assets/img/loading.gif" alt="Loading" />
+		</div>
+		<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+		<script src="assets/js/helpers.js"></script>
 
 	</body>
 </html>
