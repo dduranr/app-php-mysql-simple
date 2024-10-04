@@ -5,26 +5,7 @@ function administrarTarea(id, accion) {
 		// --> Recuperamos la info de la acción solicitada y armamos los datos a enviar en la petición Ajax
 		var ajaxDatos = new FormData();
 
-		if (accion == "crear") {
-			// Mi intención inicial era crear un formulario HTML, sin embargo, para mantener la simplicidad de la aplicación opto por usar un simple prompt.
-			// jQuery('#wrapper-form-crear-tarea').css('display','block');
-			var nombre = prompt('Nombre de la nueva tarea: ');
-			if (nombre !== undefined && nombre !== null) {
-				if (nombre.length > 0) {
-					ajaxDatos.append('accion','crear');
-					ajaxDatos.append('nombre',nombre);
-				}
-				else {
-					alert('El nombre de la nueva tarea NO puede ir vacío.');
-					return false;
-				}
-			}
-			else {
-				return false;
-			}
-		}
-
-		else if (accion == "editar") {
+		if (accion == "editar") {
 		}
 
 		else if (accion == "eliminar") {

@@ -18,7 +18,7 @@
 			    $stmt->bindParam(1, $nombre);
 			    $stmt->execute();
 				$AJAX_return = true;
-				$AJAX_msg = 'Tarea creada satisfactoriamente.';
+				$AJAX_msg = 'Tarea creada satisfactoriamente.<br>Redirigiendo al inicio...';
 			}
 
 			elseif ($accion==='eliminar') {
