@@ -23,7 +23,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Tareas</title>
-		<link rel="stylesheet" type="text/css" href="assets/css/estilos.css?1">
+		<link rel="stylesheet" type="text/css" href="assets/css/estilos.css?5">
 	</head>
 	<body>
 
@@ -94,6 +94,19 @@
 		<div class="spinner-gif">
 			<img src="assets/img/loading.gif" alt="Loading" />
 		</div>
+
+		<div id="wrapper-form-crear-tarea" class="form-popup">
+			<form id="form-crear-tarea">
+				<h2>Crear tarea</h2>
+				<label>Nombre</label>
+				<input type="text" name="task_name">
+				<input type="hidden" name="accion" value="crear">
+				<p class="margin30">
+					<input type="submit" value="Crear">
+				</p>
+			</form>
+		</div>
+
 		<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 		<script src="assets/js/helpers.js"></script>
 
