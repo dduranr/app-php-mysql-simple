@@ -7,6 +7,7 @@
 	$nombre       = (isset($_POST['nombre']) && strlen($_POST['nombre'])>0 ) ? trim(htmlspecialchars($_POST['nombre'])) : null;
 	$AJAX_return  = false;
 	$AJAX_msg     = null;
+	$sufixTarea   = '<br><br>Espera, serás redirigido automáticamente al inicio...<img class="width20px" src="assets/img/loading.gif" alt="Loading" />';
 
 
 	if ($accion !== null) {
@@ -18,7 +19,7 @@
 			    $stmt->bindParam(1, $nombre);
 			    $stmt->execute();
 				$AJAX_return = true;
-				$AJAX_msg = 'Tarea creada satisfactoriamente vía <strong>AJAX</strong>.<br><br>Redirigiendo al inicio...';
+				$AJAX_msg = 'Tarea creada satisfactoriamente.'.$sufixTarea;
 			}
 
 			elseif ($accion==='editar') {
@@ -28,7 +29,7 @@
 			    $stmt->bindParam(2, $id);
 			    $stmt->execute();
 				$AJAX_return = true;
-				$AJAX_msg = 'Tarea '.$id.' actualizada correctamente vía <strong>AJAX</strong>.<br><br>Redirigiendo al inicio...';
+				$AJAX_msg = 'Tarea '.$id.' actualizada correctamente.'.$sufixTarea;
 			}
 
 			elseif ($accion==='eliminar') {
@@ -37,7 +38,7 @@
 			    $stmt->bindParam(1, $id);
 			    $stmt->execute();
 				$AJAX_return = true;
-				$AJAX_msg = 'Tarea '.$id.' eliminada correctamente.';
+				$AJAX_msg = 'Eliminado';
 			}
 
 		}

@@ -35,13 +35,9 @@ function administrarTarea(id, accion) {
 			},
 			success: function(response) {
 				if (response.return === true) {
-					if (accion == "crear") {
-						jQuery('#wrapper-msg-success').removeClass('displayNone');
-						jQuery('#msg-success ').html(response.msg);
-					}
-					else if (accion == "eliminar") {
+					if (accion == "eliminar") {
 						jQuery('#btn-eliminar-'+response.id).html(response.msg).addClass('bg-danger').attr('disabled', true);
-						jQuery('#btn-editar-'+response.id).attr('href', 'javascript:;');
+						jQuery('#btn-editar-'+response.id).hide('slow');
 					}
 				}
 				else {

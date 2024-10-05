@@ -32,8 +32,11 @@
 		<?php if($res) : ?>
 			<div class="contenedor">
 				<div class="fila">
-					<div class="columna-12">
-						<h2>Editar tarea con ID <?php echo $id; ?></h2>
+					<div class="columna-6">
+						<h2 class="margin0">Editar tarea con ID <?php echo $id; ?></h2>
+					</div>
+					<div class="columna-6">
+						<a href="index.php" class="boton-cancelar">Cancelar</a>
 					</div>
 				</div>
 			</div>

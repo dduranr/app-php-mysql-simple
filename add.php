@@ -10,8 +10,11 @@
 
 		<div class="contenedor">
 			<div class="fila">
-				<div class="columna-12">
-					<h2>Nueva tarea</h2>
+				<div class="columna-6">
+					<h2 class="margin0">Nueva tarea</h2>
+				</div>
+				<div class="columna-6">
+					<a href="index.php" class="boton-cancelar">Cancelar</a>
 				</div>
 			</div>
 		</div>
