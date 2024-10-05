@@ -23,9 +23,7 @@
 						<label>Nombre</label>
 						<input type="text" id="nombre" name="nombre">
 						<input type="hidden" name="accion" value="crear">
-						<p class="margin30">
-							<button type="submit">Crear</button>
-						</p>
+						<button type="submit" class="displayBlock marginTop30 boton-crear">Crear</button>
 					</form>
 				</div>
 			</div>

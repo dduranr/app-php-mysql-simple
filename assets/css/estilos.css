@@ -232,6 +232,9 @@ a:visited {
 .bg-success > * {
   color: white;
 }
+.width0 {
+  width: 0;
+}
 .width10 {
   width: 10%;
 }
@@ -261,6 +264,9 @@ a:visited {
 }
 .width100 {
   width: 100%;
+}
+.height0 {
+  height: 0;
 }
 .height10 {
   height: 10px;
@@ -292,6 +298,9 @@ a:visited {
 .height100 {
   height: 100px;
 }
+.padding0 {
+  padding: 0;
+}
 .padding1 {
   padding: 1px;
 }
@@ -321,6 +330,9 @@ a:visited {
 }
 .padding50 {
   padding: 50px;
+}
+.margin0 {
+  margin: 0;
 }
 .margin1 {
   margin: 1px;
@@ -352,6 +364,15 @@ a:visited {
 .margin50 {
   margin: 50px;
 }
+.marginTop10 {
+  margin-top: 10px;
+}
+.marginTop20 {
+  margin-top: 20px;
+}
+.marginTop30 {
+  margin-top: 30px;
+}
 .form-popup {
   display: none;
   position: fixed;
@@ -381,6 +402,22 @@ a:visited {
 .form-popup form input {
   color: #000;
 }
+table {
+  width: 100%;
+}
+table tr td {
+  padding: 5px;
+}
+.boton-crear {
+  text-decoration: none;
+  padding: 10px;
+  background-color: #008000;
+  color: white;
+}
+.boton-crear:hover {
+  background-color: #006000;
+  color: white;
+}
 .contenedor {
   max-width: 1140px;
   margin: auto;
@@ -395,59 +432,79 @@ div[class^="columna"] {
   background-color: rgba(0, 0, 255, 0.15);
   border: 1px solid rgba(0, 0, 255, 0.3);
 }
+@media screen and (max-width: 768px) {
+  .columna-1,
+  .columna-2,
+  .columna-3,
+  .columna-4,
+  .columna-5,
+  .columna-6,
+  .columna-7,
+  .columna-8,
+  .columna-9,
+  .columna-10,
+  .columna-11,
+  .columna-12 {
+    width: 100%;
+  }
+}
 @media screen and (min-width: 768px) {
-  /*
-	Las siguientes clases ocupan la línea "flex: 0 0 auto". Significado:
-		0 		- 	flex-grow. 		Si hay espacio extra, la etiqueta no se expandirá para llenarlo.
-		0		- 	flex-shrink.	La etiqueta no se encogerá si el espacio disponible es menor al tamaño natural del elemento.
-		auto 	- 	flex-basis.		Tamaño inicial de la etiqueta. El valor auto quiere decir que el tamaño se determinará de acuerdo al contenido del elemento.
-*/
   .columna-1 {
-    flex: 0 0 auto;
     width: 8.33333333%;
   }
   .columna-2 {
-    flex: 0 0 auto;
     width: 16.66666667%;
   }
   .columna-3 {
-    flex: 0 0 auto;
     width: 25%;
   }
   .columna-4 {
-    flex: 0 0 auto;
     width: 33.33333333%;
   }
   .columna-5 {
-    flex: 0 0 auto;
     width: 41.66666667%;
   }
   .columna-6 {
-    flex: 0 0 auto;
     width: 50%;
   }
   .columna-7 {
-    flex: 0 0 auto;
     width: 58.33333333%;
   }
   .columna-8 {
-    flex: 0 0 auto;
     width: 66.66666667%;
   }
   .columna-9 {
-    flex: 0 0 auto;
     width: 75%;
   }
   .columna-10 {
-    flex: 0 0 auto;
     width: 83.33333333%;
   }
   .columna-11 {
-    flex: 0 0 auto;
     width: 91.66666667%;
   }
   .columna-12 {
-    flex: 0 0 auto;
     width: 100%;
+  }
+}
+@media screen and (min-width: 100px) {
+  .columna-1,
+  .columna-2,
+  .columna-3,
+  .columna-4,
+  .columna-5,
+  .columna-6,
+  .columna-7,
+  .columna-8,
+  .columna-9,
+  .columna-10,
+  .columna-11,
+  .columna-12 {
+    /*
+            Sobre el valor de flex:
+                0       -   flex-grow.      Si hay espacio extra, la etiqueta no se expandirá para llenarlo.
+                0       -   flex-shrink.    La etiqueta no se encogerá si el espacio disponible es menor al tamaño natural del elemento.
+                auto    -   flex-basis.     Tamaño inicial de la etiqueta. El valor auto quiere decir que el tamaño se determinará de acuerdo al contenido del elemento.
+        */
+    flex: 0 0 auto;
   }
 }

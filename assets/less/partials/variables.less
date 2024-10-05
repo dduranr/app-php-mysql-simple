@@ -435,6 +435,18 @@
 	margin: 0;
 }
 
+// El tag al que aplica es es el propio botón (sea un <a> o un <button>)
+.boton-basico(@padding, @bg-color, @color, @hover-bg, @hover-color) {
+	text-decoration: none;
+	padding: @padding;
+	background-color: @bg-color;
+	color: @color;
+	&:hover {
+		background-color: @hover-bg;
+		color: @hover-color;
+	}
+}
+
 
 // Contenedor + <a> || button
 // (El botón no es el contenedor sino el <a> o <button>)

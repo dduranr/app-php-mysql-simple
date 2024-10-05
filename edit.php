@@ -46,9 +46,7 @@
 							<input type="text" id="nombre" name="nombre" value="<?php echo $res['task_name']; ?>">
 							<input type="hidden" name="id" value="<?php echo $id; ?>">
 							<input type="hidden" name="accion" value="editar">
-							<p class="margin30">
-								<button type="submit">Editar</button>
-							</p>
+							<button type="submit" class="displayBlock marginTop30 boton-crear">Editar</button>
 						</form>
 					</div>
 				</div>

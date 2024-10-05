@@ -30,10 +30,10 @@
 		<div class="contenedor">
 			<div class="fila">
 				<div class="columna-6">
-					<h2>Lista de tareas</h2>
+					<h2 class="margin0">Lista de tareas</h2>
 				</div>
 				<div class="columna-6">
-					<a href="add.php">Crear tarea</a>
+					<a href="add.php" class="boton-crear">Crear tarea</a>
 				</div>
 			</div>
 		</div>
@@ -41,7 +41,7 @@
 		<div class="contenedor">
 			<div class="fila">
 				<div class="columna-12">
-					<table border="1" class="width100">
+					<table border="1">
 						<thead>
 							<tr>
 								<th>ID</th>
@@ -58,7 +58,9 @@
                                     <td><?php echo $val['task_name']; ?></td>
                                     <td><?php echo $val['created_at']; ?></td>
                                     <td>
-                                    	<a id="btn-editar-<?php echo $id; ?>" href="edit.php?id=<?php echo $id; ?>">Editar</a>
+                                    	<a id="btn-editar-<?php echo $id; ?>" href="edit.php?id=<?php echo $id; ?>">
+                                    		<img src="assets/img/editar.png" alt="">
+                                    	</a>
                                     </td>
                                     <td>
                                     	<button id="btn-eliminar-<?php echo $id; ?>" data-id="<?php echo $id; ?>" onClick="administrarTarea(this.getAttribute('data-id'), 'eliminar')">Eliminar</button>
